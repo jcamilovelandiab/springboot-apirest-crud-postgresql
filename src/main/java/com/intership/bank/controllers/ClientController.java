@@ -44,6 +44,7 @@ public class ClientController {
 	public ResponseEntity<Void> deleteUser(@PathVariable("id") Long id){
 		Client client = new Client();
 		client.setId(id);
+		System.out.println("Hey there");
 		clientService.deleteClient(client);
 		return ResponseEntity.ok().build();
 	}
